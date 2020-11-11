@@ -9,7 +9,7 @@ namespace NugetToNpmConverter
         public string name;
         public string displayName;
         public string version;
-        public Dictionary<string, string> dependencies = new();
+        public Dictionary<string, string> dependencies = new Dictionary<string, string>();
         public string description;
         public string author;
         public string homepage;
