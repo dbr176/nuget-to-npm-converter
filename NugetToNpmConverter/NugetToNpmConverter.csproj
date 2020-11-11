@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>dotnet-NugetToNpmConverter-AA017036-80EC-43B0-A6B7-B6914B9E7F32</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration.CommandLine" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="5.0.0-rc.2.20475.5" />
+    <PackageReference Include="NuGet.Common" Version="5.8.0" />
+    <PackageReference Include="NuGet.DependencyResolver.Core" Version="5.8.0" />
+    <PackageReference Include="NuGet.Frameworks" Version="5.8.0" />
+    <PackageReference Include="NuGet.Packaging" Version="5.8.0" />
+  </ItemGroup>
+</Project>

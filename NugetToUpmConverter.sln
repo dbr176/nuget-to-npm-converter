@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30615.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NugetToNpmConverter", "NugetToNpmConverter\NugetToNpmConverter.csproj", "{BAA3C5F9-34B4-449A-8022-4B8A4A00119B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BAA3C5F9-34B4-449A-8022-4B8A4A00119B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAA3C5F9-34B4-449A-8022-4B8A4A00119B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAA3C5F9-34B4-449A-8022-4B8A4A00119B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAA3C5F9-34B4-449A-8022-4B8A4A00119B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C1162AF7-1ADA-4B5E-9907-1A203437EE3B}
+	EndGlobalSection
+EndGlobal
