@@ -11,7 +11,7 @@ namespace NugetToNpmConverter
 
         public ByIdPackageFilter(IEnumerable<string> names)
         {
-            _names = new(names);
+            _names = new HashSet<string>(names);
         }
 
         public bool IsExcluded(PackageDependency packageDependency)

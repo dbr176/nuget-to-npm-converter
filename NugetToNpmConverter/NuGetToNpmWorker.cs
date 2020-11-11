@@ -24,7 +24,9 @@ namespace NugetToNpmConverter
         private const string _Recursive = "Converter:Recursive";
         private const string _PlaceholderDirectory = "Converter:PlaceholderDirectory";
         private const string _GeneratePlaceholders = "Converter:GeneratePlaceholders";
-        private const string _PreserveExistingPackages = "Converter:PreserveExistingPackages"; 
+        private const string _PreserveExistingPackages = "Converter:PreserveExistingPackages";
+        private const string _UseMinVersionAsExact = "Converter:UseMinVersionAsExact";
+
         private readonly IPackageNameMapper _nameMapper;
         private readonly IPackageFilter _filter;
         private readonly FindPackageByIdResource _findPackageByIdResource;
@@ -220,6 +222,12 @@ namespace NugetToNpmConverter
         {
             foreach (var p in dependencies)
             {
+                if (_configuration.GetValue<bool>(_UseMinVersionAsExact))
+                {
+                    packageJson.dependencies[_nameMapper.Map(p.Id)] = $"{p.VersionRange.MinVersion}";
+                    return;
+                }
+
                 var minVersion =
                     p.VersionRange.HasLowerBound
                     ? (p.VersionRange.IsMinInclusive
