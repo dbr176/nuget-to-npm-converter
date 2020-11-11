@@ -26,6 +26,7 @@ namespace NugetToNpmConverter
         private const string _GeneratePlaceholders = "Converter:GeneratePlaceholders";
         private const string _PreserveExistingPackages = "Converter:PreserveExistingPackages";
         private const string _UseMinVersionAsExact = "Converter:UseMinVersionAsExact";
+        private const string _FormatPackageJson = "Converter:FormatPackageJson";
 
         private readonly IPackageNameMapper _nameMapper;
         private readonly IPackageFilter _filter;
@@ -225,7 +226,7 @@ namespace NugetToNpmConverter
                 if (_configuration.GetValue<bool>(_UseMinVersionAsExact))
                 {
                     packageJson.dependencies[_nameMapper.Map(p.Id)] = $"{p.VersionRange.MinVersion}";
-                    return;
+                    continue;
                 }
 
                 var minVersion =
